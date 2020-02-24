@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipito"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <!--Layout 1-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <View
+                android:background="@color/colorPrimary"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <View
+                android:background="@color/colorPrimary"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            <View
+                android:background="@color/colorPrimary"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            <View
+                android:background="@color/colorPrimary"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Layout 2-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:background="@color/colorPrimary"
+                android:id="@+id/L2View1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <View
+                    android:id="@+id/L2View2"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_width="@dimen/com_square"
+                    android:layout_height="@dimen/com_square"
+                    android:background="@color/colorPrimary" />
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:id="@+id/L2View3"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_width="@dimen/com_square"
+                    android:layout_height="@dimen/com_square" />
+            </GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Layout 3-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/L3GuideLine1"
+                app:layout_constraintGuide_percent="0.25"
+                android:orientation="vertical"/>
+            <TextView
+                android:id="@+id/L3TextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="This is a TextView"
+                android:textSize="22sp"
+                app:layout_constraintLeft_toLeftOf="@id/L3GuideLine1"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/L3View1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="This is a Button"
+                app:layout_constraintTop_toBottomOf="@id/L3TextView1"
+                app:layout_constraintLeft_toLeftOf="@id/L3GuideLine1" />
+            <View
+                android:background="@color/colorAccent"
+                android:id="@+id/L3View2"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                app:layout_constraintLeft_toLeftOf="@id/L3GuideLine1"
+                app:layout_constraintBottom_toTopOf="@id/L3View3"
+                app:layout_constraintTop_toBottomOf="@id/L3View1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias=".4"/>
+            <View
+                android:background="@color/colorAccent"
+                android:id="@+id/L3View3"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                app:layout_constraintLeft_toLeftOf="@id/L3GuideLine1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Layout 4-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/L4View1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/L4View5"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginTop="96dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/L4View1" />
+            <View
+                android:id="@+id/L4View2"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginStart="104dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/L4View3"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginTop="96dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.655"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/L4View1"
+                app:layout_constraintVertical_bias="0.598" />
+
+            <View
+                android:id="@+id/L4View4"
+                android:layout_width="@dimen/com_square"
+                android:layout_height="@dimen/com_square"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginTop="96dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/L4View1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Layout 5-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/L5View1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@id/L5View1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="@string/lorem_ipsum"
+                    />
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Layout 6-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/L6GuideLine1"
+                app:layout_constraintGuide_percent="0.25"
+                android:orientation="horizontal"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/L6GuideLine1">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/L6View1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/L6View2"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View1"
+                        app:layout_constraintRight_toLeftOf="@id/L6View3"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View2"
+                        app:layout_constraintRight_toLeftOf="@id/L6View4"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View3"
+                        app:layout_constraintRight_toLeftOf="@id/L6View5"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View4"
+                        app:layout_constraintRight_toLeftOf="@id/L6View6"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View5"
+                        app:layout_constraintRight_toLeftOf="@id/L6View7"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View6"
+                        app:layout_constraintRight_toLeftOf="@id/L6View8"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View7"
+                        app:layout_constraintRight_toLeftOf="@id/L6View9"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View8"
+                        app:layout_constraintRight_toLeftOf="@id/L6View10"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <Button
+                        android:id="@+id/L6View10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/L6View9"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Layout 7-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/L7GuideLine1"
+                app:layout_constraintGuide_percent="0.25"
+                android:orientation="horizontal"/>
+            <TextView
+                android:id="@+id/L7TextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is a TextView"
+                android:textSize="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/L7GuideLine1"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/L7TextView1">
+                <Button
+                    android:id="@+id/L7Button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintTop_toBottomOf="@id/L7Button1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                    <include layout="@layout/checkboxes"/>
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ViewFlipper>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
